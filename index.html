@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaluluwa - Ancient Filipino Beliefs</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&amp;family=Lora:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    
+    .font-cinzel {
+      font-family: 'Cinzel', serif;
+    }
+    
+    .font-lora {
+      font-family: 'Lora', serif;
+    }
+    
+    .pattern-bg {
+      background-image: 
+        radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.06) 0%, transparent 40%),
+        radial-gradient(circle at 40% 80%, rgba(139, 90, 43, 0.05) 0%, transparent 45%);
+    }
+    
+    .tribal-border {
+      border-image: repeating-linear-gradient(
+        90deg,
+        #8B5A2B 0px,
+        #8B5A2B 10px,
+        transparent 10px,
+        transparent 20px,
+        #D4AF37 20px,
+        #D4AF37 30px,
+        transparent 30px,
+        transparent 40px
+      ) 1;
+    }
+    
+    .card-hover {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(139, 90, 43, 0.2);
+    }
+    
+    .glow-text {
+      text-shadow: 0 0 40px rgba(212, 175, 55, 0.3);
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    .float-animation {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .animate-fade-in {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+    
+    .delay-100 { animation-delay: 0.1s; }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-300 { animation-delay: 0.3s; }
+    .delay-400 { animation-delay: 0.4s; }
+    .delay-500 { animation-delay: 0.5s; }
+    .delay-600 { animation-delay: 0.6s; }
+    
+    .scroll-indicator {
+      animation: bounce 2s infinite;
+    }
+    
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-10px); }
+      60% { transform: translateY(-5px); }
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full font-lora" style="background-color: #1a1410; color: #f5efe6;">
+  <div class="h-full overflow-auto pattern-bg"><!-- Navigation -->
+   <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md" style="background-color: rgba(26, 20, 16, 0.95); border-bottom: 1px solid rgba(212, 175, 55, 0.2);">
+    <div class="max-w-6xl mx-auto px-4 py-4">
+     <div class="flex items-center justify-between">
+      <div class="flex items-center gap-3">
+       <svg class="w-10 h-10" viewbox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="28" stroke="#D4AF37" stroke-width="2" /> <path d="M30 8 L30 52 M8 30 L52 30" stroke="#D4AF37" stroke-width="1.5" opacity="0.5" /> <circle cx="30" cy="30" r="12" stroke="#D4AF37" stroke-width="2" /> <circle cx="30" cy="30" r="4" fill="#D4AF37" /> <path d="M30 2 L32 8 L28 8 Z M30 58 L32 52 L28 52 Z M2 30 L8 32 L8 28 Z M58 30 L52 32 L52 28 Z" fill="#D4AF37" />
+       </svg>
+       <div>
+        <h1 id="site-title" class="font-cinzel text-xl font-bold" style="color: #D4AF37;">KALULUWA</h1>
+        <p id="site-tagline" class="text-xs tracking-widest opacity-70">Ancient Filipino Heritage</p>
+       </div>
+      </div>
+      <div class="hidden md:flex items-center gap-8"><a href="#beliefs" class="text-sm tracking-wide hover:text-amber-400 transition-colors">Beliefs</a> <a href="#practices" class="text-sm tracking-wide hover:text-amber-400 transition-colors">Practices</a> <a href="#deities" class="text-sm tracking-wide hover:text-amber-400 transition-colors">Deities</a> <a href="#team" class="text-sm tracking-wide hover:text-amber-400 transition-colors">Team</a> <a href="#about" class="text-sm tracking-wide hover:text-amber-400 transition-colors">About</a>
+      </div><button id="mobile-menu-btn" class="md:hidden p-2" aria-label="Open menu">
+       <svg class="w-6 h-6" fill="none" stroke="#D4AF37" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+       </svg></button>
+     </div>
+    </div>
+   </nav><!-- Mobile Menu -->
+   <div id="mobile-menu" class="fixed inset-0 z-40 hidden" style="background-color: rgba(26, 20, 16, 0.98);">
+    <div class="flex flex-col items-center justify-center h-full gap-8"><a href="#beliefs" class="text-2xl font-cinzel tracking-wide hover:text-amber-400 transition-colors mobile-link">Beliefs</a> <a href="#practices" class="text-2xl font-cinzel tracking-wide hover:text-amber-400 transition-colors mobile-link">Practices</a> <a href="#deities" class="text-2xl font-cinzel tracking-wide hover:text-amber-400 transition-colors mobile-link">Deities</a> <a href="#team" class="text-2xl font-cinzel tracking-wide hover:text-amber-400 transition-colors mobile-link">Team</a> <a href="#about" class="text-2xl font-cinzel tracking-wide hover:text-amber-400 transition-colors mobile-link">About</a> <button id="close-menu" class="mt-8 p-3 rounded-full border border-amber-600">
+      <svg class="w-6 h-6" fill="none" stroke="#D4AF37" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg></button>
+    </div>
+   </div><!-- Hero Section -->
+   <header class="relative min-h-screen flex items-center justify-center px-4 pt-20">
+    <div class="absolute inset-0 overflow-hidden">
+     <div class="absolute top-20 left-10 w-32 h-32 rounded-full float-animation" style="background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);"></div>
+     <div class="absolute bottom-40 right-20 w-48 h-48 rounded-full float-animation" style="background: radial-gradient(circle, rgba(139, 90, 43, 0.1) 0%, transparent 70%); animation-delay: -3s;"></div>
+     <div class="absolute top-1/3 right-1/4 w-24 h-24 rounded-full float-animation" style="background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%); animation-delay: -1.5s;"></div>
+    </div>
+    <div class="relative text-center max-w-4xl mx-auto">
+     <div class="mb-8 animate-fade-in opacity-0">
+      <svg class="w-24 h-24 mx-auto" viewbox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="45" stroke="#D4AF37" stroke-width="1" stroke-dasharray="4 4" /> <circle cx="50" cy="50" r="35" stroke="#8B5A2B" stroke-width="1" /> <path d="M50 15 L55 35 L75 35 L59 47 L65 67 L50 55 L35 67 L41 47 L25 35 L45 35 Z" fill="#D4AF37" opacity="0.8" /> <circle cx="50" cy="50" r="8" fill="#D4AF37" />
+      </svg>
+     </div>
+     <h2 id="hero-title" class="font-cinzel text-4xl md:text-6xl lg:text-7xl font-bold mb-6 glow-text animate-fade-in opacity-0 delay-100" style="color: #D4AF37;">Whispers of the Ancestors</h2>
+     <p id="hero-description" class="text-lg md:text-xl lg:text-2xl mb-8 leading-relaxed opacity-80 animate-fade-in opacity-0 delay-200 max-w-2xl mx-auto">Explore the rich spiritual traditions, sacred beliefs, and timeless practices of pre-colonial Philippines</p>
+     <div class="flex flex-wrap justify-center gap-4 animate-fade-in opacity-0 delay-300"><a href="#beliefs" class="px-8 py-3 font-cinzel text-sm tracking-widest transition-all hover:scale-105" style="background: linear-gradient(135deg, #D4AF37, #8B5A2B); color: #1a1410; border-radius: 2px;"> BEGIN JOURNEY </a> <a href="#about" class="px-8 py-3 font-cinzel text-sm tracking-widest border transition-all hover:bg-amber-900/20" style="border-color: #D4AF37; color: #D4AF37; border-radius: 2px;"> LEARN MORE </a>
+     </div>
+     <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 scroll-indicator">
+      <svg class="w-6 h-6 opacity-50" fill="none" stroke="#D4AF37" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
+     </div>
+    </div>
+   </header><!-- Beliefs Section -->
+   <section id="beliefs" class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+     <div class="text-center mb-16"><span class="inline-block px-4 py-1 text-xs tracking-widest mb-4" style="background-color: rgba(212, 175, 55, 0.1); color: #D4AF37; border: 1px solid rgba(212, 175, 55, 0.3);">SPIRITUAL BELIEFS</span>
+      <h3 class="font-cinzel text-3xl md:text-4xl font-bold mb-4" style="color: #D4AF37;">The Soul &amp; Spirit World</h3>
+      <p class="max-w-2xl mx-auto opacity-70">Ancient Filipinos held deep beliefs about the soul, afterlife, and the spirit realm that influenced every aspect of their daily lives.</p>
+     </div>
+     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"><!-- Belief Card 1 -->
+      <article class="card-hover p-6 rounded-sm" style="background: linear-gradient(145deg, rgba(45, 35, 28, 0.8), rgba(30, 24, 18, 0.9)); border: 1px solid rgba(212, 175, 55, 0.15);">
+       <div class="w-14 h-14 mb-4 flex items-center justify-center rounded-full" style="background-color: rgba(212, 175, 55, 0.1);">
+        <svg class="w-8 h-8" viewbox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="8" stroke="#D4AF37" stroke-width="2" /> <path d="M20 4 v6 M20 30 v6 M4 20 h6 M30 20 h6" stroke="#D4AF37" stroke-width="2" /> <circle cx="20" cy="20" r="3" fill="#D4AF37" />
+        </svg>
+       </div>
+       <h4 class="font-cinzel text-xl font-semibold mb-3" style="color: #D4AF37;">Kaluluwa (Soul)</h4>
+       <p class="text-sm leading-relaxed opacity-80">The ancient Filipinos believed every person possessed a kaluluwa—a soul that could leave the body during dreams or illness. The babaylan (spiritual leaders) performed rituals to retrieve wandering souls and restore balance.</p>
+       <div class="mt-4 pt-4" style="border-top: 1px solid rgba(212, 175, 55, 0.1);"><span class="text-xs tracking-widest opacity-50">CORE BELIEF</span>
+       </div>
+      </article><!-- Belief Card 2 -->
+      <article class="card-hover p-6 rounded-sm" style="background: linear-gradient(145deg, rgba(45, 35, 28, 0.8), rgba(30, 24, 18, 0.9)); border: 1px solid rgba(212, 175, 55, 0.15);">
+       <div class="w-14 h-14 mb-4 flex items-center justify-center rounded-full" style="background-color: rgba(212, 175, 55, 0.1);">
+        <svg class="w-8 h-8" viewbox="0 0 40 40" fill="none"><path d="M20 5 C10 5 5 15 5 20 C5 30 15 35 20 35 C25 35 35 30 35 20 C35 15 30 5 20 5" stroke="#D4AF37" stroke-width="2" fill="none" /> <path d="M15 20 Q20 15 25 20 Q20 25 15 20" stroke="#D4AF37" stroke-width="1.5" /> <circle cx="20" cy="20" r="2" fill="#D4AF37" />
+        </svg>
+       </div>
+       <h4 class="font-cinzel text-xl font-semibold mb-3" style="color: #D4AF37;">Kaluwalhatian (Heaven)</h4>
+       <p class="text-sm leading-relaxed opacity-80">The realm of the blessed dead, Kaluwalhatian was believed to be a paradise where virtuous souls resided. Entry required proper burial rites and a life lived according to ancestral customs and moral codes.</p>
+       <div class="mt-4 pt-4" style="border-top: 1px solid rgba(212, 175, 55, 0.1);"><span class="text-xs tracking-widest opacity-50">AFTERLIFE</span>
+       </div>
+      </article><!-- Belief Card 3 -->
+      <article class="card-hover p-6 rounded-sm" style="background: linear-gradient(145deg, rgba(45, 35, 28, 0.8), rgba(30, 24, 18, 0.9)); border: 1px solid rgba(212, 175, 55, 0.15);">
+       <div class="w-14 h-14 mb-4 flex items-center justify-center rounded-full" style="background-color: rgba(212, 175, 55, 0.1);">
+        <svg class="w-8 h-8" viewbox="0 0 40 40" fill="none"><path d="M20 8 L8 32 L32 32 Z" stroke="#D4AF37" stroke-width="2" fill="none" /> <path d="M20 14 L14 28 L26 28 Z" stroke="#D4AF37" stroke-width="1" opacity="0.5" /> <circle cx="20" cy="22" r="3" fill="#D4AF37" />
+        </svg>
+       </div>
+       <h4 class="font-cinzel text-xl font-semibold mb-3" style="color: #D4AF37;">Kasanaan (Underworld)</h4>
+       <p class="text-sm leading-relaxed opacity-80">Unlike the Western concept of hell, Kasanaan was a shadowy realm for souls who died without proper rites. It wasn't punishment but a state of wandering, which is why funeral rituals were crucial.</p>
+       <div class="mt-4 pt-4" style="border-top: 1px solid rgba(212, 175, 55, 0.1);"><span class="text-xs tracking-widest opacity-50">SPIRIT REALM</span>
+       </div>
+      </article><!-- Belief Card 4 -->
+      <article class="card-hover p-6 rounded-sm" style="background: linear-gradient(145deg, rgba(45, 35, 28, 0.8), rgba(30, 24, 18, 0.9)); border: 1px solid rgba(212, 175, 55, 0.15);">
+       <div class="w-14 h-14 mb-4 flex items-center justify-center rounded-full" style="background-color: rgba(212, 175, 55, 0.1);">
+        <svg class="w-8 h-8" viewbox="0 0 40 40" fill="none"><circle cx="20" cy="12" r="6" stroke="#D4AF37" stroke-width="2" /> <path d="M12 22 C12 18 20 16 20 20 C20 16 28 18 28 22 L28 34 L12 34 Z" stroke="#D4AF37" stroke-width="2" fill="none" />
+        </svg>
+       </div>
+       <h4 class="font-cinzel text-xl font-semibold mb-3" style="color: #D4AF37;">Diwata &amp; Nature Spirits</h4>
+       <p class="text-sm leading-relaxed opacity-80">Every natural element—trees, rivers, mountains—was believed to house a diwata or nature spirit. Filipinos sought permission before cutting trees or entering forests, maintaining harmony with these guardians.</p>
+       <div class="mt-4 pt-4" style="border-top: 1px solid rgba(212, 175, 55, 0.1);"><span class="text-xs tracking-widest opacity-50">ANIMISM</span>
+       </div>
+      </article><!-- Belief Card 5 -->
+      <article class="card-hover p-6 rounded-sm" style="background: linear-gradient(145deg, rgba(45, 35, 28, 0.8), rgba(30, 24, 18, 0.9)); border: 1px solid rgba(212, 175, 55, 0.15);">
+       <div class="w-14 h-14 mb-4 flex items-center justify-center rounded-full" style="background-color: rgba(212, 175, 55, 0.1);">
+        <svg class="w-8 h-8" viewbox="0 0 40 40" fill="none"><path d="M20 5 L23 15 L33 15 L25 22 L28 32 L20 26 L12 32 L15 22 L7 15 L17 15 Z" stroke="#D4AF37" stroke-width="2" fill="none" />
+        </svg>
+       </div>
+       <h4 class="font-cinzel text-xl font-semibold mb-3" style="color: #D4AF37;">Ancestor Veneration</h4>
+       <p class="text-sm leading-relaxed opacity-80">The spirits of deceased ancestors, called ninuno, were deeply revered. Families kept anito (ancestral figures) in their homes and offered food and prayers, believing ancestors guided and protected the living.</p>
+       <div class="mt-4 pt-4" style="border-top: 1px solid rgba(212, 175, 55, 0.1);"><span class="text-xs tracking-widest opacity-50">ANCESTRAL</span>
+       </div>
+      </article><!-- Belief Card 6 -->
+      <article class="card-hover p-6 rounded-sm" style="background: linear-gradient(145deg, rgba(45, 35, 28, 0.8), rgba(30, 24, 18, 0.9)); border: 1px solid rgba(212, 175, 55, 0.15);">
+       <div class="w-14 h-14 mb-4 flex items-center justify-center rounded-full" style="background-color: rgba(212, 175, 55, 0.1);">
+        <svg class="w-8 h-8" viewbox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="14" stroke="#D4AF37" stroke-width="2" /> <circle cx="20" cy="20" r="6" stroke="#D4AF37" stroke-width="1.5" /> <path d="M20 6 L20 14 M20 26 L20 34 M6 20 L14 20 M26 20 L34 20" stroke="#D4AF37" stroke-width="1.5" />
+        </svg>
+       </div>
+       <h4 class="font-cinzel text-xl font-semibold mb-3" style="color: #D4AF37;">Cosmic Duality</h4>
+       <p class="text-sm leading-relaxed opacity-80">Balance between opposing forces was central—light and dark, male and female, earth and sky. This duality explained natural phenomena and guided moral decisions, emphasizing harmony over conquest.</p>
+       <div class="mt-4 pt-4" style="border-top: 1px solid rgba(212, 175, 55, 0.1);"><span class="text-xs tracking-widest opacity-50">COSMOLOGY</span>
+       </div>
+      </article>
+     </div>
+    </div>
+   </section><!-- Practices Section -->
+   <section id="practices" class="py-20 px-4" style="background: linear-gradient(180deg, rgba(45, 35, 28, 0.3) 0%, transparent 100%);">
+    <div class="max-w-6xl mx-auto">
+     <div class="text-center mb-16"><span class="inline-block px-4 py-1 text-xs tracking-widest mb-4" style="background-color: rgba(212, 175, 55, 0.1); color: #D4AF37; border: 1px solid rgba(212, 175, 55, 0.3);">SACRED PRACTICES</span>
+      <h3 class="font-cinzel text-3xl md:text-4xl font-bold mb-4" style="color: #D4AF37;">Rituals &amp; Traditions</h3>
+      <p class="max-w-2xl mx-auto opacity-70">From birth to death, ancient Filipinos observed sacred rituals that connected them to the spirit world and their community.</p>
+     </div>
+     <div class="space-y-8"><!-- Practice 1 -->
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+       <div class="order-2 md:order-1"><span class="text-xs tracking-widest mb-2 block" style="color: #8B5A2B;">SPIRITUAL LEADERSHIP</span>
+        <h4 class="font-cinzel text-2xl font-semibold mb-4" style="color: #D4AF37;">The Babaylan</h4>
+        <p class="opacity-80 leading-relaxed mb-4">The babaylan were the spiritual leaders of pre-colonial Philippine society—predominantly women who served as healers, mediums, and keepers of sacred knowledge. They communicated with spirits, performed rituals for harvests and healing, and guided communities through major life transitions.</p>
+        <p class="opacity-80 leading-relaxed">Their role was not merely religious but also political and social, as they advised datus (chiefs) and preserved oral traditions through chants and epics.</p>
+       </div>
+       <div class="order-1 md:order-2 flex justify-center">
+        <div class="w-64 h-64 rounded-full flex items-center justify-center" style="background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, rgba(139, 90, 43, 0.1) 50%, transparent 70%);">
+         <svg class="w-32 h-32" viewbox="0 0 100 100" fill="none"><circle cx="50" cy="25" r="12" stroke="#D4AF37" stroke-width="2" /> <path d="M30 45 Q50 35 70 45 L75 85 Q50 95 25 85 Z" stroke="#D4AF37" stroke-width="2" fill="none" /> <path d="M40 55 L35 75 M60 55 L65 75" stroke="#D4AF37" stroke-width="1.5" /> <circle cx="50" cy="60" r="8" stroke="#D4AF37" stroke-width="1.5" /> <path d="M35 25 Q25 15 30 5 M65 25 Q75 15 70 5" stroke="#D4AF37" stroke-width="1.5" />
+         </svg>
+        </div>
+       </div>
+      </div><!-- Divider -->
+      <div class="flex items-center justify-center py-8">
+       <div class="h-px flex-1" style="background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);"></div>
+       <svg class="w-8 h-8 mx-4" viewbox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="6" stroke="#D4AF37" stroke-width="1.5" /> <circle cx="16" cy="16" r="2" fill="#D4AF37" />
+       </svg>
+       <div class="h-px flex-1" style="background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);"></div>
+      </div><!-- Practice 2 -->
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+       <div class="flex justify-center">
+        <div class="w-64 h-64 rounded-full flex items-center justify-center" style="background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, rgba(139, 90, 43, 0.1) 50%, transparent 70%);">
+         <svg class="w-32 h-32" viewbox="0 0 100 100" fill="none"><rect x="25" y="20" width="50" height="60" rx="2" stroke="#D4AF37" stroke-width="2" fill="none" /> <path d="M35 30 L65 30 M35 40 L55 40 M35 50 L60 50 M35 60 L50 60" stroke="#D4AF37" stroke-width="1.5" /> <circle cx="50" cy="10" r="6" stroke="#D4AF37" stroke-width="1.5" /> <path d="M25 80 L35 90 L50 75 L65 90 L75 80" stroke="#D4AF37" stroke-width="2" />
+         </svg>
+        </div>
+       </div>
+       <div><span class="text-xs tracking-widest mb-2 block" style="color: #8B5A2B;">FUNERAL RITES</span>
+        <h4 class="font-cinzel text-2xl font-semibold mb-4" style="color: #D4AF37;">Death &amp; Burial Traditions</h4>
+        <p class="opacity-80 leading-relaxed mb-4">Death rituals were elaborate affairs lasting days or weeks. The deceased was dressed in fine clothes, and mourners gathered for the laraw—a wake filled with singing, feasting, and sharing stories of the departed.</p>
+        <p class="opacity-80 leading-relaxed">Burial practices varied by region: some used burial jars, others carved boat-shaped coffins symbolizing the soul's journey across waters. Gold death masks were placed on nobility to preserve their likeness for the afterlife.</p>
+       </div>
+      </div><!-- Divider -->
+      <div class="flex items-center justify-center py-8">
+       <div class="h-px flex-1" style="background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);"></div>
+       <svg class="w-8 h-8 mx-4" viewbox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="6" stroke="#D4AF37" stroke-width="1.5" /> <circle cx="16" cy="16" r="2" fill="#D4AF37" />
+       </svg>
+       <div class="h-px flex-1" style="background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);"></div>
+      </div><!-- Practice 3 -->
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+       <div class="order-2 md:order-1"><span class="text-xs tracking-widest mb-2 block" style="color: #8B5A2B;">BODY MODIFICATION</span>
+        <h4 class="font-cinzel text-2xl font-semibold mb-4" style="color: #D4AF37;">Batok: Sacred Tattooing</h4>
+        <p class="opacity-80 leading-relaxed mb-4">Tattoos, called batok, were far more than decoration—they were sacred marks of identity, achievement, and spiritual protection. Warriors earned tattoos for each enemy defeated, while women received patterns marking their coming of age and social status.</p>
+        <p class="opacity-80 leading-relaxed">The process itself was ritualistic, performed by mambabatok (tattoo artists) using thorns and soot. Each design held specific meaning, and the patterns served as a visual biography readable by all who understood the symbols.</p>
+       </div>
+       <div class="order-1 md:order-2 flex justify-center">
+        <div class="w-64 h-64 rounded-full flex items-center justify-center" style="background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, rgba(139, 90, 43, 0.1) 50%, transparent 70%);">
+         <svg class="w-32 h-32" viewbox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="35" stroke="#D4AF37" stroke-width="2" fill="none" /> <path d="M35 30 L35 70 M45 25 L45 75 M55 25 L55 75 M65 30 L65 70" stroke="#D4AF37" stroke-width="1" opacity="0.5" /> <path d="M30 45 L70 45 M30 55 L70 55" stroke="#D4AF37" stroke-width="1" opacity="0.5" /> <path d="M50 20 L55 30 L50 40 L45 30 Z" stroke="#D4AF37" stroke-width="1.5" fill="none" /> <path d="M50 60 L55 70 L50 80 L45 70 Z" stroke="#D4AF37" stroke-width="1.5" fill="none" /> <circle cx="50" cy="50" r="8" stroke="#D4AF37" stroke-width="2" />
+         </svg>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Deities Section -->
+   <section id="deities" class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+     <div class="text-center mb-16"><span class="inline-block px-4 py-1 text-xs tracking-widest mb-4" style="background-color: rgba(212, 175, 55, 0.1); color: #D4AF37; border: 1px solid rgba(212, 175, 55, 0.3);">DIVINE PANTHEON</span>
+      <h3 class="font-cinzel text-3xl md:text-4xl font-bold mb-4" style="color: #D4AF37;">Gods &amp; Goddesses</h3>
+      <p class="max-w-2xl mx-auto opacity-70">The ancient Filipino pantheon varied by region, with each ethnic group honoring their own deities who governed nature, fortune, and human affairs.</p>
+     </div>
+     <div class="grid md:grid-cols-2 gap-6"><!-- Deity Card 1 -->
+      <div class="p-8 rounded-sm card-hover" style="background: linear-gradient(145deg, rgba(45, 35, 28, 0.8), rgba(30, 24, 18, 0.9)); border: 1px solid rgba(212, 175, 55, 0.15);">
+       <div class="flex items-start gap-6">
+        <div class="w-20 h-20 flex-shrink-0 flex items-center justify-center rounded-full" style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(139, 90, 43, 0.1));">
+         <svg class="w-12 h-12" viewbox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="16" stroke="#D4AF37" stroke-width="2" /> <circle cx="24" cy="24" r="6" fill="#D4AF37" /> <path d="M24 4 L24 8 M24 40 L24 44 M4 24 L8 24 M40 24 L44 24 M10 10 L13 13 M35 35 L38 38 M10 38 L13 35 M35 13 L38 10" stroke="#D4AF37" stroke-width="2" />
+         </svg>
+        </div>
+        <div>
+         <h4 class="font-cinzel text-xl font-semibold mb-2" style="color: #D4AF37;">Bathala</h4>
+         <p class="text-xs tracking-widest mb-3 opacity-50">TAGALOG • SUPREME DEITY</p>
+         <p class="text-sm leading-relaxed opacity-80">The supreme god of the Tagalogs, Bathala was the creator of all things—the heavens, earth, and humanity. His name means "may God" and he ruled from Kaluwalhatian, rarely intervening directly but governing through lesser deities.</p>
+        </div>
+       </div>
+      </div><!-- Deity Card 2 -->
+      <div class="p-8 rounded-sm card-hover" style="background: linear-gradient(145deg, rgba(45, 35, 28, 0.8), rgba(30, 24, 18, 0.9)); border: 1px solid rgba(212, 175, 55, 0.15);">
+       <div class="flex items-start gap-6">
+        <div class="w-20 h-20 flex-shrink-0 flex items-center justify-center rounded-full" style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(139, 90, 43, 0.1));">
+         <svg class="w-12 h-12" viewbox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="14" stroke="#D4AF37" stroke-width="2" /> <circle cx="24" cy="24" r="6" stroke="#D4AF37" stroke-width="1.5" fill="none" /> <path d="M24 6 Q30 16 24 24 Q18 16 24 6" stroke="#D4AF37" stroke-width="1.5" /> <circle cx="18" cy="22" r="2" fill="#D4AF37" /> <circle cx="30" cy="22" r="2" fill="#D4AF37" />
+         </svg>
+        </div>
+        <div>
+         <h4 class="font-cinzel text-xl font-semibold mb-2" style="color: #D4AF37;">Mayari</h4>
+         <p class="text-xs tracking-widest mb-3 opacity-50">TAGALOG • MOON GODDESS</p>
+         <p class="text-sm leading-relaxed opacity-80">Daughter of Bathala, Mayari was the one-eyed goddess of the moon, beauty, and revolution. She lost her eye in a battle with her brother Apolaki over dominion of the world, which explains why the moon's light is softer than the sun's.</p>
+        </div>
+       </div>
+      </div><!-- Deity Card 3 -->
+      <div class="p-8 rounded-sm card-hover" style="background: linear-gradient(145deg, rgba(45, 35, 28, 0.8), rgba(30, 24, 18, 0.9)); border: 1px solid rgba(212, 175, 55, 0.15);">
+       <div class="flex items-start gap-6">
+        <div class="w-20 h-20 flex-shrink-0 flex items-center justify-center rounded-full" style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(139, 90, 43, 0.1));">
+         <svg class="w-12 h-12" viewbox="0 0 48 48" fill="none"><path d="M24 8 L28 18 L38 18 L30 26 L34 38 L24 30 L14 38 L18 26 L10 18 L20 18 Z" stroke="#D4AF37" stroke-width="2" fill="none" /> <circle cx="24" cy="24" r="4" fill="#D4AF37" />
+         </svg>
+        </div>
+        <div>
+         <h4 class="font-cinzel text-xl font-semibold mb-2" style="color: #D4AF37;">Tala</h4>
+         <p class="text-xs tracking-widest mb-3 opacity-50">TAGALOG • STAR GODDESS</p>
+         <p class="text-sm leading-relaxed opacity-80">Sister to Mayari, Tala was the goddess of the morning and evening stars. She guided fishermen and travelers by night, and her appearance at dawn and dusk marked the boundaries between the realms of day and darkness.</p>
+        </div>
+       </div>
+      </div><!-- Deity Card 4 -->
+      <div class="p-8 rounded-sm card-hover" style="background: linear-gradient(145deg, rgba(45, 35, 28, 0.8), rgba(30, 24, 18, 0.9)); border: 1px solid rgba(212, 175, 55, 0.15);">
+       <div class="flex items-start gap-6">
+        <div class="w-20 h-20 flex-shrink-0 flex items-center justify-center rounded-full" style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(139, 90, 43, 0.1));">
+         <svg class="w-12 h-12" viewbox="0 0 48 48" fill="none"><path d="M12 40 Q12 24 24 14 Q36 24 36 40" stroke="#D4AF37" stroke-width="2" fill="none" /> <path d="M18 40 Q18 28 24 20 Q30 28 30 40" stroke="#D4AF37" stroke-width="1.5" fill="none" /> <circle cx="24" cy="12" r="4" stroke="#D4AF37" stroke-width="2" />
+         </svg>
+        </div>
+        <div>
+         <h4 class="font-cinzel text-xl font-semibold mb-2" style="color: #D4AF37;">Apolaki</h4>
+         <p class="text-xs tracking-widest mb-3 opacity-50">TAGALOG • SUN GOD</p>
+         <p class="text-sm leading-relaxed opacity-80">God of the sun and war, Apolaki was fierce and proud. Warriors invoked his name before battle. His legendary fight with his sister Mayari shaped the cosmos, leading to the agreement that he would rule by day and she by night.</p>
+        </div>
+       </div>
+      </div><!-- Deity Card 5 -->
+      <div class="p-8 rounded-sm card-hover" style="background: linear-gradient(145deg, rgba(45, 35, 28, 0.8), rgba(30, 24, 18, 0.9)); border: 1px solid rgba(212, 175, 55, 0.15);">
+       <div class="flex items-start gap-6">
+        <div class="w-20 h-20 flex-shrink-0 flex items-center justify-center rounded-full" style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(139, 90, 43, 0.1));">
+         <svg class="w-12 h-12" viewbox="0 0 48 48" fill="none"><ellipse cx="24" cy="30" rx="16" ry="10" stroke="#D4AF37" stroke-width="2" fill="none" /> <path d="M16 30 Q16 20 24 12 Q32 20 32 30" stroke="#D4AF37" stroke-width="2" fill="none" /> <path d="M24 8 L24 12 M20 10 L24 8 L28 10" stroke="#D4AF37" stroke-width="1.5" /> <circle cx="24" cy="26" r="3" fill="#D4AF37" />
+         </svg>
+        </div>
+        <div>
+         <h4 class="font-cinzel text-xl font-semibold mb-2" style="color: #D4AF37;">Sidapa</h4>
+         <p class="text-xs tracking-widest mb-3 opacity-50">VISAYAN • GOD OF DEATH</p>
+         <p class="text-sm leading-relaxed opacity-80">The Visayan god of death, Sidapa measured the lives of mortals by marking their lifespans on a great tree. When a mark was reached, that person's life ended. He was also known for winning the heart of the moon god through persistent courtship.</p>
+        </div>
+       </div>
+      </div><!-- Deity Card 6 -->
+      <div class="p-8 rounded-sm card-hover" style="background: linear-gradient(145deg, rgba(45, 35, 28, 0.8), rgba(30, 24, 18, 0.9)); border: 1px solid rgba(212, 175, 55, 0.15);">
+       <div class="flex items-start gap-6">
+        <div class="w-20 h-20 flex-shrink-0 flex items-center justify-center rounded-full" style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(139, 90, 43, 0.1));">
+         <svg class="w-12 h-12" viewbox="0 0 48 48" fill="none"><path d="M8 36 Q16 28 24 36 Q32 28 40 36" stroke="#D4AF37" stroke-width="2" /> <path d="M8 28 Q16 20 24 28 Q32 20 40 28" stroke="#D4AF37" stroke-width="1.5" opacity="0.6" /> <path d="M8 20 Q16 12 24 20 Q32 12 40 20" stroke="#D4AF37" stroke-width="1" opacity="0.3" /> <circle cx="24" cy="36" r="4" fill="#D4AF37" />
+         </svg>
+        </div>
+        <div>
+         <h4 class="font-cinzel text-xl font-semibold mb-2" style="color: #D4AF37;">Aman Sinaya</h4>
+         <p class="text-xs tracking-widest mb-3 opacity-50">TAGALOG • SEA GODDESS</p>
+         <p class="text-sm leading-relaxed opacity-80">The primordial goddess of the sea, Aman Sinaya was one of the three original deities. She created the fish and all sea creatures, and fishermen offered her prayers and sacrifices before voyages for safe passage and bountiful catches.</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- About Section -->
+   <section id="about" class="py-20 px-4" style="background: linear-gradient(180deg, rgba(45, 35, 28, 0.3) 0%, transparent 100%);">
+    <div class="max-w-4xl mx-auto text-center"><span class="inline-block px-4 py-1 text-xs tracking-widest mb-4" style="background-color: rgba(212, 175, 55, 0.1); color: #D4AF37; border: 1px solid rgba(212, 175, 55, 0.3);">ABOUT THIS PROJECT</span>
+     <h3 class="font-cinzel text-3xl md:text-4xl font-bold mb-6" style="color: #D4AF37;">Preserving Heritage</h3>
+     <p class="opacity-80 leading-relaxed mb-8">This blog is dedicated to preserving and sharing the rich spiritual heritage of the pre-colonial Philippines. Much of this knowledge survived through oral traditions, archaeological discoveries, and the accounts of early Spanish chroniclers. By understanding our ancestors' worldview, we gain deeper appreciation for the wisdom embedded in Filipino culture.</p>
+     <p class="opacity-80 leading-relaxed mb-8">The beliefs and practices featured here represent various ethnic groups across the Philippine archipelago—Tagalog, Visayan, Ilocano, and many others���each with their unique interpretations while sharing common threads of animism, ancestor veneration, and reverence for nature.</p>
+     <div class="flex flex-wrap justify-center gap-8 mt-12">
+      <div class="text-center">
+       <div class="text-4xl font-cinzel font-bold mb-2" style="color: #D4AF37;">
+        7,000+
+       </div>
+       <div class="text-sm opacity-60">
+        Islands of Heritage
+       </div>
+      </div>
+      <div class="text-center">
+       <div class="text-4xl font-cinzel font-bold mb-2" style="color: #D4AF37;">
+        100+
+       </div>
+       <div class="text-sm opacity-60">
+        Ethnic Groups
+       </div>
+      </div>
+      <div class="text-center">
+       <div class="text-4xl font-cinzel font-bold mb-2" style="color: #D4AF37;">
+        1,000s
+       </div>
+       <div class="text-sm opacity-60">
+        Years of Tradition
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Team Section -->
+   <section id="team" class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+     <div class="text-center mb-16"><span class="inline-block px-4 py-1 text-xs tracking-widest mb-4" style="background-color: rgba(212, 175, 55, 0.1); color: #D4AF37; border: 1px solid rgba(212, 175, 55, 0.3);">OUR TEAM</span>
+      <h3 class="font-cinzel text-3xl md:text-4xl font-bold mb-4" style="color: #D4AF37;">Group 7</h3>
+      <p class="max-w-2xl mx-auto opacity-70">Meet the dedicated researchers and cultural advocates working to preserve and share ancient Filipino wisdom.</p>
+     </div>
+     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8"><!-- Team Member 1 -->
+      <div class="text-center card-hover">
+       <div class="mb-6 flex justify-center">
+        <div class="w-40 h-40 rounded-full overflow-hidden" style="border: 2px solid rgba(212, 175, 55, 0.3);"><img src="./images/member1.jpg" alt="Alalid, Kezia Nissi" loading="lazy" class="w-full h-full object-cover" onerror="console.error('Image failed to load:', this.src); this.style.display='none'; this.nextElementSibling.style.display='flex';">
+         <div class="w-full h-full flex items-center justify-center" style="display: none; background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(139, 90, 43, 0.1));">
+          <svg class="w-20 h-20" viewbox="0 0 80 80" fill="none"><circle cx="40" cy="28" r="12" stroke="#D4AF37" stroke-width="2" /> <path d="M20 65 Q20 45 40 45 Q60 45 60 65" stroke="#D4AF37" stroke-width="2" fill="none" /> <path d="M35 28 L37 32 M43 28 L45 32" stroke="#D4AF37" stroke-width="1.5" /> <path d="M36 36 Q40 38 44 36" stroke="#D4AF37" stroke-width="1.5" />
+          </svg>
+         </div>
+        </div>
+       </div>
+       <h4 id="member1-name" class="font-cinzel text-xl font-semibold mb-2" style="color: #D4AF37;">Alalid, Kezia Nissi</h4>
+       <p id="member1-role" class="text-sm opacity-70 mb-4">Lead Researcher</p>
+       <div class="h-px max-w-16 mx-auto" style="background-color: rgba(212, 175, 55, 0.3);"></div>
+      </div><!-- Team Member 2 -->
+      <div class="text-center card-hover">
+       <div class="mb-6 flex justify-center">
+        <div class="w-40 h-40 rounded-full overflow-hidden" style="border: 2px solid rgba(212, 175, 55, 0.3);"><img src="./images/member2.jpg" alt="Morales, Owen" loading="lazy" class="w-full h-full object-cover" onerror="console.error('Image failed to load:', this.src); this.style.display='none'; this.nextElementSibling.style.display='flex';">
+         <div class="w-full h-full flex items-center justify-center" style="display: none; background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(139, 90, 43, 0.1));">
+          <svg class="w-20 h-20" viewbox="0 0 80 80" fill="none"><circle cx="40" cy="28" r="12" stroke="#D4AF37" stroke-width="2" /> <path d="M20 65 Q20 45 40 45 Q60 45 60 65" stroke="#D4AF37" stroke-width="2" fill="none" /> <path d="M35 28 L37 32 M43 28 L45 32" stroke="#D4AF37" stroke-width="1.5" /> <path d="M36 36 Q40 38 44 36" stroke="#D4AF37" stroke-width="1.5" />
+          </svg>
+         </div>
+        </div>
+       </div>
+       <h4 id="member2-name" class="font-cinzel text-xl font-semibold mb-2" style="color: #D4AF37;">Morales, Owen</h4>
+       <p id="member2-role" class="text-sm opacity-70 mb-4">Cultural Historian</p>
+       <div class="h-px max-w-16 mx-auto" style="background-color: rgba(212, 175, 55, 0.3);"></div>
+      </div><!-- Team Member 3 -->
+      <div class="text-center card-hover">
+       <div class="mb-6 flex justify-center">
+        <div class="w-40 h-40 rounded-full overflow-hidden" style="border: 2px solid rgba(212, 175, 55, 0.3);"><img src="./images/member3.jpg" alt="Panes, Dave Anthony" loading="lazy" class="w-full h-full object-cover" onerror="console.error('Image failed to load:', this.src); this.style.display='none'; this.nextElementSibling.style.display='flex';">
+         <div class="w-full h-full flex items-center justify-center" style="display: none; background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(139, 90, 43, 0.1));">
+          <svg class="w-20 h-20" viewbox="0 0 80 80" fill="none"><circle cx="40" cy="28" r="12" stroke="#D4AF37" stroke-width="2" /> <path d="M20 65 Q20 45 40 45 Q60 45 60 65" stroke="#D4AF37" stroke-width="2" fill="none" /> <path d="M35 28 L37 32 M43 28 L45 32" stroke="#D4AF37" stroke-width="1.5" /> <path d="M36 36 Q40 38 44 36" stroke="#D4AF37" stroke-width="1.5" />
+          </svg>
+         </div>
+        </div>
+       </div>
+       <h4 id="member3-name" class="font-cinzel text-xl font-semibold mb-2" style="color: #D4AF37;">Panes, Dave Anthony</h4>
+       <p id="member3-role" class="text-sm opacity-70 mb-4">Anthropologist</p>
+       <div class="h-px max-w-16 mx-auto" style="background-color: rgba(212, 175, 55, 0.3);"></div>
+      </div><!-- Team Member 4 -->
+      <div class="text-center card-hover">
+       <div class="mb-6 flex justify-center">
+        <div class="w-40 h-40 rounded-full overflow-hidden" style="border: 2px solid rgba(212, 175, 55, 0.3);"><img src="./images/member4.jpg" alt="Pelarmo, Geian" loading="lazy" class="w-full h-full object-cover" onerror="console.error('Image failed to load:', this.src); this.style.display='none'; this.nextElementSibling.style.display='flex';">
+         <div class="w-full h-full flex items-center justify-center" style="display: none; background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(139, 90, 43, 0.1));">
+          <svg class="w-20 h-20" viewbox="0 0 80 80" fill="none"><circle cx="40" cy="28" r="12" stroke="#D4AF37" stroke-width="2" /> <path d="M20 65 Q20 45 40 45 Q60 45 60 65" stroke="#D4AF37" stroke-width="2" fill="none" /> <path d="M35 28 L37 32 M43 28 L45 32" stroke="#D4AF37" stroke-width="1.5" /> <path d="M36 36 Q40 38 44 36" stroke="#D4AF37" stroke-width="1.5" />
+          </svg>
+         </div>
+        </div>
+       </div>
+       <h4 id="member4-name" class="font-cinzel text-xl font-semibold mb-2" style="color: #D4AF37;">Pelarmo, Geian</h4>
+       <p id="member4-role" class="text-sm opacity-70 mb-4">Content Writer</p>
+       <div class="h-px max-w-16 mx-auto" style="background-color: rgba(212, 175, 55, 0.3);"></div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Footer -->
+   <footer class="py-12 px-4" style="border-top: 1px solid rgba(212, 175, 55, 0.15);">
+    <div class="max-w-6xl mx-auto">
+     <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+       <svg class="w-8 h-8" viewbox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="28" stroke="#D4AF37" stroke-width="1.5" /> <circle cx="30" cy="30" r="4" fill="#D4AF37" />
+       </svg><span class="font-cinzel text-lg" style="color: #D4AF37;">KALULUWA</span>
+      </div>
+      <p class="text-sm opacity-50 text-center">Honoring the wisdom of our ancestors • Preserving Philippine heritage</p>
+      <div class="flex gap-6"><a href="#beliefs" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Beliefs</a> <a href="#practices" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Practices</a> <a href="#deities" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Deities</a> <a href="#team" class="text-sm opacity-60 hover:opacity-100 transition-opacity">Team</a>
+      </div>
+     </div>
+    </div>
+   </footer>
+  </div>
+  <script>
+    const defaultConfig = {
+      site_title: 'KALULUWA',
+      site_tagline: 'Ancient Filipino Heritage',
+      hero_title: 'Whispers of the Ancestors',
+      hero_description: 'Explore the rich spiritual traditions, sacred beliefs, and timeless practices of pre-colonial Philippines',
+      member1_name: 'Alalid, Kezia Nissi',
+      member1_role: 'Lead Researcher',
+      member2_name: 'Morales, Owen',
+      member2_role: 'Cultural Historian',
+      member3_name: 'Panes, Dave Anthony',
+      member3_role: 'Anthropologist',
+      member4_name: 'Pelarmo, Geian',
+      member4_role: 'Content Writer',
+      primary_color: '#D4AF37',
+      secondary_color: '#8B5A2B',
+      background_color: '#1a1410',
+      text_color: '#f5efe6',
+      surface_color: '#2d231c',
+      font_family: 'Lora',
+      font_size: 16
+    };
+
+    let config = { ...defaultConfig };
+
+    // Mobile menu functionality
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeMenuBtn = document.getElementById('close-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+    });
+
+    closeMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    async function onConfigChange(newConfig) {
+      config = { ...config, ...newConfig };
+      
+      // Update text content
+      document.getElementById('site-title').textContent = config.site_title || defaultConfig.site_title;
+      document.getElementById('site-tagline').textContent = config.site_tagline || defaultConfig.site_tagline;
+      document.getElementById('hero-title').textContent = config.hero_title || defaultConfig.hero_title;
+      document.getElementById('hero-description').textContent = config.hero_description || defaultConfig.hero_description;
+      
+      // Update team members
+      document.getElementById('member1-name').textContent = config.member1_name || defaultConfig.member1_name;
+      document.getElementById('member1-role').textContent = config.member1_role || defaultConfig.member1_role;
+      
+      document.getElementById('member2-name').textContent = config.member2_name || defaultConfig.member2_name;
+      document.getElementById('member2-role').textContent = config.member2_role || defaultConfig.member2_role;
+      
+      document.getElementById('member3-name').textContent = config.member3_name || defaultConfig.member3_name;
+      document.getElementById('member3-role').textContent = config.member3_role || defaultConfig.member3_role;
+      
+      document.getElementById('member4-name').textContent = config.member4_name || defaultConfig.member4_name;
+      document.getElementById('member4-role').textContent = config.member4_role || defaultConfig.member4_role;
+      
+      // Apply colors
+      const primaryColor = config.primary_color || defaultConfig.primary_color;
+      const backgroundColor = config.background_color || defaultConfig.background_color;
+      const textColor = config.text_color || defaultConfig.text_color;
+      
+      document.body.style.backgroundColor = backgroundColor;
+      document.body.style.color = textColor;
+      
+      // Update primary colored elements
+      document.querySelectorAll('[style*="color: #D4AF37"]').forEach(el => {
+        el.style.color = primaryColor;
+      });
+      
+      // Apply font
+      const fontFamily = config.font_family || defaultConfig.font_family;
+      const baseFontStack = 'Georgia, serif';
+      document.body.style.fontFamily = `${fontFamily}, ${baseFontStack}`;
+      
+      // Apply font size scaling
+      const baseSize = config.font_size || defaultConfig.font_size;
+      document.documentElement.style.fontSize = `${baseSize}px`;
+    }
+
+    function mapToCapabilities(cfg) {
+      return {
+        recolorables: [
+          {
+            get: () => cfg.background_color || defaultConfig.background_color,
+            set: (value) => { cfg.background_color = value; window.elementSdk.setConfig({ background_color: value }); }
+          },
+          {
+            get: () => cfg.surface_color || defaultConfig.surface_color,
+            set: (value) => { cfg.surface_color = value; window.elementSdk.setConfig({ surface_color: value }); }
+          },
+          {
+            get: () => cfg.text_color || defaultConfig.text_color,
+            set: (value) => { cfg.text_color = value; window.elementSdk.setConfig({ text_color: value }); }
+          },
+          {
+            get: () => cfg.primary_color || defaultConfig.primary_color,
+            set: (value) => { cfg.primary_color = value; window.elementSdk.setConfig({ primary_color: value }); }
+          },
+          {
+            get: () => cfg.secondary_color || defaultConfig.secondary_color,
+            set: (value) => { cfg.secondary_color = value; window.elementSdk.setConfig({ secondary_color: value }); }
+          }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => cfg.font_family || defaultConfig.font_family,
+          set: (value) => { cfg.font_family = value; window.elementSdk.setConfig({ font_family: value }); }
+        },
+        fontSizeable: {
+          get: () => cfg.font_size || defaultConfig.font_size,
+          set: (value) => { cfg.font_size = value; window.elementSdk.setConfig({ font_size: value }); }
+        }
+      };
+    }
+
+    function mapToEditPanelValues(cfg) {
+      return new Map([
+        ['site_title', cfg.site_title || defaultConfig.site_title],
+        ['site_tagline', cfg.site_tagline || defaultConfig.site_tagline],
+        ['hero_title', cfg.hero_title || defaultConfig.hero_title],
+        ['hero_description', cfg.hero_description || defaultConfig.hero_description],
+        ['member1_name', cfg.member1_name || defaultConfig.member1_name],
+        ['member1_role', cfg.member1_role || defaultConfig.member1_role],
+        ['member2_name', cfg.member2_name || defaultConfig.member2_name],
+        ['member2_role', cfg.member2_role || defaultConfig.member2_role],
+        ['member3_name', cfg.member3_name || defaultConfig.member3_name],
+        ['member3_role', cfg.member3_role || defaultConfig.member3_role],
+        ['member4_name', cfg.member4_name || defaultConfig.member4_name],
+        ['member4_role', cfg.member4_role || defaultConfig.member4_role]
+      ]);
+    }
+
+    // Initialize SDK
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c88f27236816e8f',t:'MTc3MDE5NTMwNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
